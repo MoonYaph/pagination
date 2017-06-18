@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        li {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            border: 1px solid #9faaa0;
+            text-align: center;
+            cursor: pointer;
+            line-height: 40px;
+            margin: 0 5px;
+        }
+        
+        .active {
+            background: #2299ee;
+            color: #fff;
+        }
+        
+        li:hover {
+            border: blue 1px solid;
+        }
+        
+        li:focus {
+            background: #000;
+        }
+        
+        .page-active {
+            color: #fff;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page"></div>
+
+    <script src="page.js"></script>
+    <script>
+        const page1 = document.getElementById('page');
+        const vivi = new Page({
+            selector: page1,
+            max: 8,
+            jump: false,
+            items: 100,
+            size: 10,
+            pages: 40,
+            curr: 1,
+        });
+    </script>
+</body>
+
+</html>
